@@ -1,3 +1,4 @@
+import model.Dealer;
 import model.Deck;
 import model.Player;
 
@@ -8,9 +9,14 @@ public class Main{
         deck.Shuffle();
 
         Player player = new Player();
+        player.receiveCard(deck.getCard());
+        player.receiveCard(deck.getCard());
+        System.out.println("Player hand " + player.getPlayerHand());
 
-        player.receiveCard(deck.getCard());
-        player.receiveCard(deck.getCard());
-        System.out.println(player.getPlayerHand());
+        Dealer dealer = new Dealer();
+        dealer.receiveCard(deck.getCard());
+        dealer.receiveCard(deck.getCard());
+        System.out.println("Dealer hand " + dealer.getPlayerHand());
+
     }
 }
