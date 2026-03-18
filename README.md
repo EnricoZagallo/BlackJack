@@ -92,17 +92,6 @@ Main.java
 
 ---
 
-## 🚀 Melhorias Futuras
-
-- [ ] Ás com valor dinâmico (1 ou 11)
-- [ ] Classe `Card` (substituir String)
-- [ ] Interface gráfica (JavaFX ou Swing)
-- [ ] Sistema de apostas 💰
-- [ ] Multiplayer
-- [ ] Histórico de partidas
-
----
-
 ## 🧑‍💻 Aprendizados
 
 Este projeto foi importante para praticar:
