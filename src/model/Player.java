@@ -37,4 +37,8 @@ public class Player {
 
         return total;
     }
+    // no Player.java e Dealer.java
+    public void clearHand() {
+        playerHand.clear();
+    }
 }

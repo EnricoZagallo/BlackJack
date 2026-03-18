@@ -37,6 +37,41 @@ public class GameController {
         view.showHand("Dealer", dealer.getPlayerHand());
 
         gameLoop();
+
+        while (true) {
+            System.out.println("\nPlay Again? (y/n)");
+            String input = scanner.next().toLowerCase();
+
+            if (input.equals("y")) {
+                resetGame();
+                gameLoop();
+            } else if (input.equals("n")) {
+                System.out.println("Thank you for playing!");
+                break;
+            } else {
+                System.out.println("type only 'y' ou 'n'");
+            }
+        }
+    }
+    public void resetGame() {
+        // Limpa mãos
+        player.clearHand();
+        dealer.clearHand();
+
+        // Recria e embaralha o deck
+        deck.gerarBaralho();
+        deck.shuffle();
+
+        // Distribui cartas iniciais
+        player.receiveCard(deck.getCard());
+        player.receiveCard(deck.getCard());
+
+        dealer.receiveCard(deck.getCard());
+        dealer.receiveCard(deck.getCard());
+
+        // Mostra mãos iniciais
+        view.showHand("Player", player.getPlayerHand());
+        view.showHand("Dealer", dealer.getPlayerHand());
     }
     public void checkGameState(){
         int playerTotal = player.getHandValue(deck);
@@ -89,14 +124,14 @@ public class GameController {
         boolean playing = true;
 
         while (playing) {
-            view.showMessage("\nDigite: (1) Hit ou (2) Stand");
+            view.showMessage("\nType: (1) Hit ou (2) Stand");
 
             int choice;
 
             if (scanner.hasNextInt()) {
                 choice = scanner.nextInt();
             } else {
-                view.showMessage("Digite apenas números!");
+                view.showMessage("Type only numbers!");
                 scanner.nextLine();
                 continue;
             }
@@ -106,7 +141,7 @@ public class GameController {
 
                 int total = player.getHandValue(deck);
                 if (total > 21) {
-                    view.showMessage("You bust! You lost.");
+                    view.showMessage("You bust!");
                     playing = false;
                 }
 
