@@ -20,24 +20,7 @@ Este projeto simula uma partida de Blackjack no terminal, onde o jogador pode:
 
 ## 🧠 Arquitetura (MVC)
 
-O projeto foi estruturado seguindo o padrão **MVC**, separando responsabilidades:
-
-
-com.blackjack
-│
-├── model → Dados e regras básicas
-│ ├── Deck.java
-│ ├── Player.java
-│ └── Dealer.java
-│
-├── view → Interface (console)
-│ └── ConsoleView.java
-│
-├── controller → Lógica do jogo
-│ └── GameController.java
-│
-└── Main.java → Ponto de entrada
-
+O projeto foi estruturado seguindo o padrão **MVC**
 
 ---
 
@@ -136,7 +119,7 @@ Este projeto foi importante para praticar:
 
 
 Player hand: [10 of Hearts, 7 of Spades]
-Dealer hand: [K of Clubs, ?]
+Dealer hand: [K of Clubs, J of Diamonds]
 
 Digite: (1) Hit ou (2) Stand
 
