@@ -1,4 +1,4 @@
-package model;
+/* package model;
 
 public class Card {
     String suit;
@@ -22,3 +22,5 @@ public class Card {
         return value + " of " + suit;
     }
 }
+
+ */

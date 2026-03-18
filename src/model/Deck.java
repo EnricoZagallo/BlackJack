@@ -18,16 +18,10 @@ public class Deck {
                 valuesList.add(value + " of " + suit);
             }
         }
-        for (String c : valuesList) {
-            System.out.println(c);
-        }
     }
 
     public void shuffle() {
         Collections.shuffle(valuesList);
-        for (String c : valuesList) {
-            System.out.println(c);
-        }
     }
 
     public String getCard() {
