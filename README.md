@@ -13,8 +13,8 @@ Este projeto simula uma partida de Blackjack no terminal, onde o jogador pode:
 - Comprar cartas (**Hit**)
 - Parar (**Stand**)
 - Jogar contra o Dealer (CPU)
-- Perder ao ultrapassar 21 pontos 💥
-- Ganhar ao ter uma mão melhor que o Dealer 🏆
+- Perder ao ultrapassar 21 pontos 
+- Ganhar ao ter uma mão melhor que o Dealer 
 
 ---
 
