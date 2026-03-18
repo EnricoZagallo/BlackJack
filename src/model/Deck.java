@@ -23,7 +23,7 @@ public class Deck {
         }
     }
 
-    public void Shuffle() {
+    public void shuffle() {
         Collections.shuffle(valuesList);
         for (String c : valuesList) {
             System.out.println(c);
@@ -32,5 +32,15 @@ public class Deck {
 
     public String getCard() {
         return valuesList.remove(0);
+    }
+
+    public int getCardValue(String card) {
+        String value = card.split(" ")[0]; // returns for example: ["K", "of", "Hearts"] and the [0] get the first index
+
+        return switch (value) {
+            case "A" -> 11;
+            case "K", "Q", "J" -> 10;
+            default -> Integer.parseInt(value); // transforms the string in integer
+        };
     }
 }

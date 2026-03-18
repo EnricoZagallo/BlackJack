@@ -10,13 +10,11 @@ public class Card {
     }
 
     public int getValue() {
-        switch (value) {
-            case "A": return 11;
-            case "K":
-            case "Q":
-            case "J": return 10;
-            default: return Integer.parseInt(value);
-        }
+        return switch (value) {
+            case "A" -> 11;
+            case "K", "Q", "J" -> 10;
+            default -> Integer.parseInt(value);
+        };
     }
 
     @Override
