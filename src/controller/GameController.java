@@ -90,7 +90,16 @@ public class GameController {
 
         while (playing) {
             view.showMessage("\nDigite: (1) Hit ou (2) Stand");
-            int choice = scanner.nextInt();
+
+            int choice;
+
+            if (scanner.hasNextInt()) {
+                choice = scanner.nextInt();
+            } else {
+                view.showMessage("Digite apenas números!");
+                scanner.nextLine();
+                continue;
+            }
 
             if (choice == 1) {
                 playerHit();

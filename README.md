@@ -66,7 +66,7 @@ Main.java
 
 - Cartas numéricas → valor normal
 - J, Q, K → valem 10
-- A → vale 11 (versão atual)
+- A → vale 1 ou 11 
 
 ### Regras:
 
