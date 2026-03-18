@@ -49,7 +49,7 @@ O projeto foi estruturado seguindo o padrão **MVC**
 1. Clone o repositório:
 
 
-git clone https://github.com/seu-usuario/seu-repo.git
+git clone https://github.com/EnricoZagallo/BlackJack
 
 
 2. Abra o projeto em uma IDE (IntelliJ, Eclipse, VS Code)
