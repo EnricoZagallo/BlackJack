@@ -29,15 +29,15 @@ public class Player {
             }
         }
 
-        // Ajusta os Ases se estourar
+        //
         while (total > 21 && aces > 0) {
-            total -= 10; // transforma 11 em 1
+            total -= 10;
             aces--;
         }
 
         return total;
     }
-    // no Player.java e Dealer.java
+
     public void clearHand() {
         playerHand.clear();
     }

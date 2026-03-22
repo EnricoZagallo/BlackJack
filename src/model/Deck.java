@@ -10,7 +10,7 @@ public class Deck {
     List<String> valuesList = new ArrayList<>();
     List<String> deckShuflled = new ArrayList<>();
 
-    public void gerarBaralho() {
+    public void createDeck() {
 
 
         for (String suit : suits) {

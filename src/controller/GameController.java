@@ -24,7 +24,7 @@ public class GameController {
         scanner = new Scanner(System.in);
     }
     public void startGame(){
-        deck.gerarBaralho();
+        deck.createDeck();
         deck.shuffle();
 
         player.receiveCard(deck.getCard());
@@ -49,27 +49,27 @@ public class GameController {
                 System.out.println("Thank you for playing!");
                 break;
             } else {
-                System.out.println("type only 'y' ou 'n'");
+                System.out.println("type only 'y' or 'n'");
             }
         }
     }
     public void resetGame() {
-        // Limpa mãos
+
         player.clearHand();
         dealer.clearHand();
 
-        // Recria e embaralha o deck
-        deck.gerarBaralho();
+
+        deck.createDeck();
         deck.shuffle();
 
-        // Distribui cartas iniciais
+
         player.receiveCard(deck.getCard());
         player.receiveCard(deck.getCard());
 
         dealer.receiveCard(deck.getCard());
         dealer.receiveCard(deck.getCard());
 
-        // Mostra mãos iniciais
+
         view.showHand("Player", player.getPlayerHand());
         view.showHand("Dealer", dealer.getPlayerHand());
     }
@@ -113,7 +113,7 @@ public class GameController {
         if (dealerTotal > 21) {
             view.showMessage("Dealer bust! You won!");
         } else if (playerTotal > dealerTotal) {
-            view.showMessage("Você won!");
+            view.showMessage("You won!");
         } else if (playerTotal < dealerTotal) {
             view.showMessage("Dealer won!");
         } else {
